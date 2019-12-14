@@ -5,6 +5,8 @@ namespace KnotPhp\Module\KnotRouter;
 
 use Throwable, Closure;
 
+use Psr\Http\Server\MiddlewareInterface;
+
 use KnotLib\Router\DispatcherInterface;
 use KnotLib\Router\Router;
 use KnotLib\Router\Builder\PhpArrayRouterBuilder;
@@ -15,7 +17,6 @@ use KnotLib\Kernel\Module\Components;
 use KnotLib\Kernel\Exception\ModuleInstallationException;
 use KnotLib\Kernel\Kernel\ApplicationInterface;
 use KnotLib\Kernel\Module\ComponentModule;
-use KnotLib\Kernel\Pipeline\MiddlewareInterface;
 
 use KnotPhp\Module\KnotRouter\Adapter\KnotKernelRouterAdapter;
 
