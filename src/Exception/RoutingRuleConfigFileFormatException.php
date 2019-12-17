@@ -5,7 +5,7 @@ namespace KnotPhp\Module\KnotRouter\Exception;
 
 use Throwable;
 
-final class RoutingRuleConfigFileFormatException extends KnotRouterModuleException implements KnotRouterModuleExceptionInterface
+final class RoutingRuleConfigFileFormatException extends KnotRouterModuleException
 {
     /**
      * RoutingRuleConfigFileFormatException constructor.

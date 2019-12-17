@@ -5,7 +5,7 @@ namespace KnotPhp\Module\KnotRouter\Exception;
 
 use Throwable;
 
-final class RoutingRuleConfigNotFoundException extends KnotRouterModuleException implements KnotRouterModuleExceptionInterface
+final class RoutingRuleConfigNotFoundException extends KnotRouterModuleException
 {
     /**
      * RoutingRuleConfigNotFoundException constructor.
