@@ -24,18 +24,18 @@ final class ArrayConfigKnotRouterModule extends ComponentModule
     private $dispatcher;
 
     /** @var array */
-    private $routing_rule;
+    private $routing_rules;
 
     /**
      * KnotRouterModule constructor.
      *
      * @param DispatcherInterface|null $dispatcher
-     * @param array $routing_rule
+     * @param array $routing_rules
      */
-    public function __construct(DispatcherInterface $dispatcher = null, array $routing_rule = null)
+    public function __construct(DispatcherInterface $dispatcher = null, array $routing_rules = null)
     {
         $this->dispatcher = $dispatcher;
-        $this->routing_rule = $routing_rule ?? [];
+        $this->routing_rules = $routing_rules ?? [];
     }
 
     /**
@@ -72,7 +72,7 @@ final class ArrayConfigKnotRouterModule extends ComponentModule
         try{
             // create router
             $router = new Router($this->dispatcher);
-            (new PhpArrayRouterBuilder($router, $this->routing_rule))->build();
+            (new PhpArrayRouterBuilder($router, $this->routing_rules))->build();
 
             // set router
             $app->router(new KnotKernelRouterAdapter($router));
