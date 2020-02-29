@@ -7,18 +7,17 @@ use Throwable;
 
 use KnotLib\Kernel\EventStream\Channels;
 use KnotLib\Kernel\EventStream\Events;
-use KnotLib\Kernel\Module\Components;
+use KnotLib\Kernel\Module\ComponentTypes;
 use KnotLib\Kernel\Exception\ModuleInstallationException;
 use KnotLib\Kernel\Kernel\ApplicationInterface;
-use KnotLib\Kernel\Module\ComponentModule;
-
+use KnotLib\Kernel\Module\ModuleInterface;
 use KnotLib\Router\DispatcherInterface;
 use KnotLib\Router\Router;
 use KnotLib\Router\Builder\PhpArrayRouterBuilder;
 
 use KnotPhp\Module\KnotRouter\Adapter\KnotKernelRouterAdapter;
 
-final class ArrayConfigKnotRouterModule extends ComponentModule
+final class ArrayConfigKnotRouterModule implements ModuleInterface
 {
     /** @var @var DispatcherInterface */
     private $dispatcher;
@@ -39,14 +38,24 @@ final class ArrayConfigKnotRouterModule extends ComponentModule
     }
 
     /**
+     * Declare dependency on another modules
+     *
+     * @return array
+     */
+    public static function requiredModules() : array
+    {
+        return [];
+    }
+
+    /**
      * Declare dependent on components
      *
      * @return array
      */
-    public static function requiredComponents() : array
+    public static function requiredComponentTypes() : array
     {
         return [
-            Components::EVENTSTREAM,
+            ComponentTypes::EVENTSTREAM,
         ];
     }
 
@@ -57,7 +66,7 @@ final class ArrayConfigKnotRouterModule extends ComponentModule
      */
     public static function declareComponentType() : string
     {
-        return Components::ROUTER;
+        return ComponentTypes::ROUTER;
     }
 
     /**
