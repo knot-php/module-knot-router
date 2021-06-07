@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter\Exception;
+namespace knotphp\module\knotrouter\exception;
 
 use Throwable;
 
@@ -11,11 +11,10 @@ final class RoutingRuleConfigFileFormatException extends KnotRouterModuleExcepti
      * RoutingRuleConfigFileFormatException constructor.
      *
      * @param string $routing_rule_config_file
-     * @param int $code
      * @param Throwable|null $prev
      */
-    public function __construct( string $routing_rule_config_file, int $code = 0, Throwable $prev = null )
+    public function __construct( string $routing_rule_config_file, Throwable $prev = null )
     {
-        parent::__construct("Routing rule config file is invalid: {$routing_rule_config_file}", $code, $prev);
+        parent::__construct("Routing rule config file is invalid: {$routing_rule_config_file}", $prev);
     }
 }

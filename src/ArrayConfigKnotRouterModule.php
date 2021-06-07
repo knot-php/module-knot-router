@@ -1,21 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter;
+namespace knotphp\module\knotrouter;
 
 use Throwable;
 
-use KnotLib\Kernel\EventStream\Channels;
-use KnotLib\Kernel\EventStream\Events;
-use KnotLib\Kernel\Module\ComponentTypes;
-use KnotLib\Kernel\Exception\ModuleInstallationException;
-use KnotLib\Kernel\Kernel\ApplicationInterface;
-use KnotLib\Kernel\Module\ModuleInterface;
-use KnotLib\Router\DispatcherInterface;
-use KnotLib\Router\Router;
-use KnotLib\Router\Builder\PhpArrayRouterBuilder;
+use knotlib\kernel\eventstream\Channels;
+use knotlib\kernel\eventstream\Events;
+use knotlib\kernel\module\ComponentTypes;
+use knotlib\kernel\exception\ModuleInstallationException;
+use knotlib\kernel\kernel\ApplicationInterface;
+use knotlib\kernel\module\ModuleInterface;
+use knotlib\router\DispatcherInterface;
+use knotlib\router\Router;
+use knotlib\router\builder\PhpArrayRouterBuilder;
 
-use KnotPhp\Module\KnotRouter\Adapter\KnotKernelRouterAdapter;
+use knotphp\module\knotrouter\adapter\KnotKernelRouterAdapter;
 
 final class ArrayConfigKnotRouterModule implements ModuleInterface
 {

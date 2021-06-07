@@ -1,25 +1,25 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter;
+namespace knotphp\module\knotrouter;
 
 use Throwable;
 
-use KnotLib\Kernel\FileSystem\Dir;
-use KnotLib\Kernel\FileSystem\FileSystemInterface;
-use KnotLib\Kernel\EventStream\Channels;
-use KnotLib\Kernel\EventStream\Events;
-use KnotLib\Kernel\Module\ComponentTypes;
-use KnotLib\Kernel\Exception\ModuleInstallationException;
-use KnotLib\Kernel\Kernel\ApplicationInterface;
-use KnotLib\Router\DispatcherInterface;
-use KnotLib\Router\Router;
-use KnotLib\Router\Builder\PhpArrayRouterBuilder;
-use KnotLib\Kernel\Module\ModuleInterface;
+use knotlib\kernel\filesystem\Dir;
+use knotlib\kernel\filesystem\FileSystemInterface;
+use knotlib\kernel\eventstream\Channels;
+use knotlib\kernel\eventstream\Events;
+use knotlib\kernel\module\ComponentTypes;
+use knotlib\kernel\exception\ModuleInstallationException;
+use knotlib\kernel\kernel\ApplicationInterface;
+use knotlib\router\DispatcherInterface;
+use knotlib\router\Router;
+use knotlib\router\Builder\PhpArrayRouterBuilder;
+use knotlib\kernel\module\ModuleInterface;
 
-use KnotPhp\Module\KnotRouter\Exception\RoutingRuleConfigFileFormatException;
-use KnotPhp\Module\KnotRouter\Exception\RoutingRuleConfigNotFoundException;
-use KnotPhp\Module\KnotRouter\Adapter\KnotKernelRouterAdapter;
+use knotphp\module\knotrouter\exception\RoutingRuleConfigFileFormatException;
+use knotphp\module\knotrouter\exception\RoutingRuleConfigNotFoundException;
+use knotphp\module\knotrouter\adapter\KnotKernelRouterAdapter;
 
 final class FileConfigKnotRouterModule implements ModuleInterface
 {

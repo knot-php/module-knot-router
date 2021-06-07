@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter\Adapter;
+namespace knotphp\module\knotrouter\adapter;
 
-use KnotLib\Router\RouterInterface as CalgamoRouterInterface;
-use KnotLib\Router\Exception\RoutingRuleBindingException as CalgamoRoutingRuleBindingException;
+use knotlib\router\RouterInterface as CalgamoRouterInterface;
+use knotlib\router\exception\RoutingRuleBindingException as CalgamoRoutingRuleBindingException;
 
-use KnotLib\Kernel\Router\RouterInterface as CalgamoKernelRouterInterface;
-use KnotLib\Kernel\Exception\RoutingException;
+use knotlib\kernel\router\RouterInterface as CalgamoKernelRouterInterface;
+use knotlib\kernel\exception\RoutingException;
 
 class KnotKernelRouterAdapter implements CalgamoKernelRouterInterface
 {

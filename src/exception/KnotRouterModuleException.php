@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter\Exception;
+namespace knotphp\module\knotrouter\exception;
 
 use Throwable;
 
-use KnotLib\Exception\KnotPhpException;
+use knotlib\exception\KnotPhpException;
 
 class KnotRouterModuleException extends KnotPhpException implements KnotRouterModuleExceptionInterface
 {
@@ -13,11 +13,10 @@ class KnotRouterModuleException extends KnotPhpException implements KnotRouterMo
      * KnotRouterModuleException constructor.
      *
      * @param string $message
-     * @param int $code
      * @param Throwable|null $prev
      */
-    public function __construct( string $message, int $code = 0, Throwable $prev = null )
+    public function __construct( string $message, Throwable $prev = null )
     {
-        parent::__construct($message, $code, $prev);
+        parent::__construct($message, 0, $prev);
     }
 }

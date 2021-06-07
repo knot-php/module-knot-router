@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotRouter\Exception;
+namespace knotphp\module\knotrouter\exception;
 
-use KnotLib\Exception\Runtime\RuntimeExceptionInterface;
+use knotlib\exception\runtime\RuntimeExceptionInterface;
 
 interface KnotRouterModuleExceptionInterface extends RuntimeExceptionInterface
 {
