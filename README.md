@@ -25,7 +25,7 @@ knot-lib/router installer modules
 
 ## Requirement
 
-PHP 7.1 or later
+PHP 7.2 or later
 
 ## Installing knot-php/module-knot-router
 
